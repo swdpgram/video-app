@@ -3,6 +3,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import { Home } from './Pages/Home/Home'
 import { IndividualCategory } from './Pages/IndividualCategory/IndividualCategory'
+import { VideoPage } from './Pages/VideoPage/VideoPage'
 
 if (import.meta.env.DEV) {
   window.onerror = (event, source, lineno, colno, err) => {
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:category" element={<IndividualCategory />} />
+        <Route path="/video/:_id" element={<VideoPage />} />
       </Routes>
     </>
   )

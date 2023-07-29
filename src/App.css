@@ -1,60 +1,92 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-.home-container { 
-    display: flex;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.font-normalization {
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.nav-padding {
+  padding-left: 10px;
+}
+
+.home-container {
+  display: flex;
 }
 
 .nav-container {
-    width: 200px;
-    margin-top: 80px;
-    padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  width: 200px;
+  margin-top: 80px;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.no-decoration { 
-    text-decoration: none;
+.no-decoration {
+  text-decoration: none;
 }
 
-.category-container { 
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.category-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.card{ 
-    width: 246px;
-    height: 138px;
+.card {
+  width: 246px;
+  height: 138px;
 }
 
-.video-card { 
-    width: 300px;
-    height: 174px;
-    margin-bottom: 10px;
+.video-card {
+  width: 300px;
+  height: 174px;
+  margin-bottom: 10px;
 }
 
-.video-listing { 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.video-listing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-
-.video-title { 
-    width: 300px;
+.video-title {
+  display: flex;
+  width: 300px;
+  gap: 10px;
 }
 
-.video-icon { 
-    /* width: 40px;
-    height: 40px; */
-    background-size: 40px 40px;    
-    background: url("https://picsum.photos/40/40");
-    
+.video-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url("https://picsum.photos/40/40");
 }
 
-.video-detail { 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.video-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.videopage-info {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  border-bottom: 1px;
+}
+
+.video-icontitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.video-othericons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

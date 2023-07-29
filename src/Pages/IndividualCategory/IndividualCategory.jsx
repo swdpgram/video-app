@@ -27,7 +27,7 @@ export function IndividualCategory() {
       <div className="video-listing"> 
       {categoryVideos?.map((video) => {
           return (
-            <div>
+            <div key={video._id}>
               <VideoCard {...video} />
             </div>
           );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-export function VideoCard({ thumbnail, category, title, views, creator }) {
+export function VideoCard({ _id, thumbnail, category, title, views, creator }) {
   const [backgroundImage, setBackgroundImage] = useState("");
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export function VideoCard({ thumbnail, category, title, views, creator }) {
   }, [thumbnail]);
 
   return (
-    <Link to={"/category/" + category} className="no-decoration">
+    <Link to={"/video/" + _id} className="no-decoration">
       
       <div
         style={{ backgroundImage: `url(${backgroundImage})` }}
