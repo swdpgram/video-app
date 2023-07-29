@@ -237,9 +237,23 @@ export const DataContext = createContext();
         },
       ]
    
+    const [ watchLater, setWatchLater ] = useState([])
+
+    const addToWatchLater = (video) => { 
+    //  console.log(video)
+    //  console.log(watchLater)
+    //  const updatedWatchLater = watchLater.push(video)
+     setWatchLater((current) => [...current,video])
+    }
+
+    const removeFromWatchLater = (toRemoveVideo) => { 
+        const updatedWatchLater = watchLater.filter((video)=> video._id !== toRemoveVideo._id)
+        setWatchLater(updatedWatchLater)
+    }
+
      return (
        <DataContext.Provider
-         value={{ categories, videos }}
+         value={{ categories, videos, watchLater, setWatchLater, addToWatchLater, removeFromWatchLater }}
        >
          {children}
        </DataContext.Provider>

@@ -13,7 +13,6 @@ export function VideoCard({ _id, thumbnail, category, title, views, creator }) {
 
   return (
     <Link to={"/video/" + _id} className="no-decoration">
-      
       <div
         style={{ backgroundImage: `url(${backgroundImage})` }}
         className="video-card"
@@ -21,13 +20,15 @@ export function VideoCard({ _id, thumbnail, category, title, views, creator }) {
 
       <div className="video-title">
         <div className="video-icon"> </div>
-        <div className="video-detail"> 
-            <b> { title } </b>
-            <b> {category} </b>
-            <span> {views} views | {creator } </span>          
+        <div className="video-detail">
+          <b> {title} </b>
+          <b> {category} </b>
+          <span>
+            {" "}
+            {views} views | {creator}{" "}
+          </span>
         </div>
       </div>
-
     </Link>
   );
 }

@@ -5,8 +5,12 @@ import { LeftAside } from "../../Components/LeftAside";
 
 export function VideoPage() {
   const { _id } = useParams();
-  const { videos } = useData();
+  const { videos, watchLater, addToWatchLater, removeFromWatchLater } =
+    useData();
   const [videoInfo, setVideoInfo] = useState({});
+
+  const isPresentWatchLater = watchLater.findIndex((item) => item._id === _id);
+  console.log(isPresentWatchLater)
 
   // console.log(_id);
 
@@ -34,27 +38,44 @@ export function VideoPage() {
           ></iframe>
 
           <div className="videopage-info">
-
             <div className="video-icontitle">
-            <div className="video-icon"> </div>
-            <b> {videoInfo?.title} </b>
+              <div className="video-icon"> </div>
+              <b> {videoInfo?.title} </b>
             </div>
 
+            <div className="video-othericons pointer">
+              {isPresentWatchLater === -1 ? (
+                <i
+                  className="material-symbols-outlined"
+                  onClick={() => addToWatchLater(videoInfo)}
+                >
+                  pace
+                </i>
+              ) : (
+                <i
+                  className="material-symbols-outlined"
+                  id="remove-watch"
+                  onClick={() => removeFromWatchLater(videoInfo)}
+                >
+                  pace
+                </i>
+              )}
 
-            <div className="video-othericons">
-            <i class="material-symbols-outlined"> pace </i>
-            <i className="material-symbols-outlined"> playlist_add </i>
-            <i class="material-symbols-outlined"> edit_note</i>
+              <i
+                className="material-symbols-outlined pointer"
+                onClick={() => console.log("clicked")}
+              >
+                playlist_add
+              </i>
+              <i className="material-symbols-outlined pointer"> edit_note</i>
             </div>
           </div>
 
-
-          <hr /> 
+          <hr />
 
           <div className="notes-container">
             <h2> My Notes </h2>
           </div>
-
         </div>
       </div>
     </>
