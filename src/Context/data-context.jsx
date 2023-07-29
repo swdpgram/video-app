@@ -243,7 +243,10 @@ export const DataContext = createContext();
     //  console.log(video)
     //  console.log(watchLater)
     //  const updatedWatchLater = watchLater.push(video)
-     setWatchLater((current) => [...current,video])
+    
+    const isPresent = watchLater.findIndex((current)=> current._id===video._id)
+    if(isPresent===-1)  {setWatchLater((current) => [...current,video])}
+    
     }
 
     const removeFromWatchLater = (toRemoveVideo) => { 
